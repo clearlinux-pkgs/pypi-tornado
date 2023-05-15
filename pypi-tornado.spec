@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-tornado
-Version  : 6.3.1
-Release  : 91
-URL      : https://files.pythonhosted.org/packages/1c/1d/89cb7050dbd009db3cb69ca74c1f0a3f5c36405f887c2d2371d9ebfe0cd5/tornado-6.3.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/1c/1d/89cb7050dbd009db3cb69ca74c1f0a3f5c36405f887c2d2371d9ebfe0cd5/tornado-6.3.1.tar.gz
+Version  : 6.3.2
+Release  : 92
+URL      : https://files.pythonhosted.org/packages/30/f0/6e5d85d422a26fd696a1f2613ab8119495c1ebb8f49e29f428d15daf79cc/tornado-6.3.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/30/f0/6e5d85d422a26fd696a1f2613ab8119495c1ebb8f49e29f428d15daf79cc/tornado-6.3.2.tar.gz
 Summary  : Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -15,6 +15,8 @@ Requires: pypi-tornado-license = %{version}-%{release}
 Requires: pypi-tornado-python = %{version}-%{release}
 Requires: pypi-tornado-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
+BuildRequires : pypi(setuptools)
+BuildRequires : pypi(wheel)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -55,10 +57,10 @@ python3 components for the pypi-tornado package.
 
 
 %prep
-%setup -q -n tornado-6.3.1
-cd %{_builddir}/tornado-6.3.1
+%setup -q -n tornado-6.3.2
+cd %{_builddir}/tornado-6.3.2
 pushd ..
-cp -a tornado-6.3.1 buildavx2
+cp -a tornado-6.3.2 buildavx2
 popd
 
 %build
@@ -66,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683048139
+export SOURCE_DATE_EPOCH=1684175540
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
