@@ -1,5 +1,5 @@
 PKG_NAME := pypi-tornado
-URL = https://files.pythonhosted.org/packages/bd/a2/ea124343e3b8dd7712561fe56c4f92eda26865f5e1040b289203729186f2/tornado-6.4.tar.gz
+URL = https://files.pythonhosted.org/packages/ee/66/398ac7167f1c7835406888a386f6d0d26ee5dbf197d8a571300be57662d3/tornado-6.4.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
