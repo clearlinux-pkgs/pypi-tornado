@@ -6,10 +6,10 @@
 # autospec commit: 99a7985
 #
 Name     : pypi-tornado
-Version  : 6.5
-Release  : 104
-URL      : https://files.pythonhosted.org/packages/63/c4/bb3bd68b1b3cd30abc6411469875e6d32004397ccc4a3230479f86f86a73/tornado-6.5.tar.gz
-Source0  : https://files.pythonhosted.org/packages/63/c4/bb3bd68b1b3cd30abc6411469875e6d32004397ccc4a3230479f86f86a73/tornado-6.5.tar.gz
+Version  : 6.5.1
+Release  : 105
+URL      : https://files.pythonhosted.org/packages/51/89/c72771c81d25d53fe33e3dca61c233b665b2780f21820ba6fd2c6793c12b/tornado-6.5.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/51/89/c72771c81d25d53fe33e3dca61c233b665b2780f21820ba6fd2c6793c12b/tornado-6.5.1.tar.gz
 Summary  : Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -157,10 +157,10 @@ python3 components for the pypi-tornado package.
 
 
 %prep
-%setup -q -n tornado-6.5
-cd %{_builddir}/tornado-6.5
+%setup -q -n tornado-6.5.1
+cd %{_builddir}/tornado-6.5.1
 pushd ..
-cp -a tornado-6.5 buildavx2
+cp -a tornado-6.5.1 buildavx2
 popd
 
 %build
@@ -168,7 +168,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1747406034
+export SOURCE_DATE_EPOCH=1748010722
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
